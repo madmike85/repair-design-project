@@ -23,10 +23,6 @@ $yeseva-one: 'Yeseva One', cursive;
 body {
   max-width: 1438px;
   margin: 0 auto;
-
-  @media screen and (max-width: 375px) {
-    background-color: $bg-color;
-  }
 }
 
 /* HEADER */
@@ -34,9 +30,9 @@ body {
 .header {
   height: 37px;
   background-color: $bg-color;
-  padding: 24px 100px 22px 82px;
+  padding: 24px 7% 22px 6%;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     height: 10px;
     padding: 23px 18px 24px 18px;
   }
@@ -61,36 +57,41 @@ body {
   }
 }
 
-.header__navbar > ul {
-  display: flex;
-  padding: 0;
-  width: 581px;
-  justify-content: space-between;
+.header__navbar {
+  width: 47%;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 
-  .navbar__item {
-    list-style: none;
-  }
+  ul {
+    display: flex;
+    padding: 0;
+    //width: 581px;
+    width: 100%;
+    justify-content: space-between;
 
-  .navbar__link {
-    font-size: 14px;
-    line-height: 16px;
-    text-decoration: none;
-    color: #fff;
-    font-family: $futura-book-c;
-
-    @include transitions();
-
-    &--active {
-      color: $elements-color;
-      text-decoration: none;
+    .navbar__item {
+      list-style: none;
     }
 
-    &:hover {
-      color: $elements-color;
+    .navbar__link {
+      font-size: 14px;
+      line-height: 16px;
+      text-decoration: none;
+      color: #fff;
+      font-family: $futura-book-c;
+
+      @include transitions();
+
+      &--active {
+        color: $elements-color;
+        text-decoration: none;
+      }
+
+      &:hover {
+        color: $elements-color;
+      }
     }
   }
 }
@@ -124,7 +125,7 @@ body {
   font-family: $futura-demi-c;
   box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 }
@@ -136,7 +137,7 @@ body {
   height: 707px;
   position: relative;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     height: 476px;
   }
 }
@@ -146,7 +147,7 @@ body {
   width: 81px;
   position: relative;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     display: none;
   }
 }
@@ -178,10 +179,11 @@ body {
 
 .intro__main {
   background-image: url(/assets/images/image-4.3.png);
-  width: 1298px;
+  //width: 1298px;
+  width: 91%;
   padding: 318px 0 0 60px;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     width: 100%;
     padding: 85px 18px 0 18px;
     background-image: url(/assets/images/intro-main-mobile.png);
@@ -197,7 +199,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 20px;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     display: block;
   }
 
@@ -217,7 +219,7 @@ body {
   height: 89px;
   margin-bottom: 41px;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     font-size: 18px;
     line-height: 24px;
     width: 100%;
@@ -229,7 +231,7 @@ body {
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     flex-direction: column;
     width: 100%;
   }
@@ -257,7 +259,7 @@ body {
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     width: 100%;
   }
 
@@ -277,7 +279,7 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     display: none;
   }
 }
@@ -320,20 +322,20 @@ body {
   height: 1074px;
   display: flex;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 1000px) {
     display: block;
     height: auto;
   }
 }
 
 .projects-slider-wrapper {
-  width: 492px;
+  width: 34%;
   height: 482px;
   background: $bg-color;
-  padding-left: 101px;
+  padding-left: 8%;
   padding-top: 176px;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 1000px) {
     width: auto;
     height: auto;
     padding: 36px 18px 0 18px;
@@ -356,7 +358,7 @@ body {
   text-transform: uppercase;
   color: $elements-color;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 1000px) {
     margin: 0 auto 34px;
     text-align: center;
   }
@@ -371,7 +373,7 @@ body {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1000px) {
   .title-line::after {
     display: none;
   }
@@ -383,15 +385,19 @@ body {
   color: #fff;
   font-family: $futura-book-c;
   height: 86px;
-  width: 440px;
+  width: 91%;
   margin-bottom: 42px;
 
-  @media screen and (max-width: 375px) {
-    width: 311px;
+  @media screen and (max-width: 1000px) {
+    width: 85%;
     text-align: center;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 425px) {
+    width: 311px;
     font-size: 14px;
     line-height: 22px;
-    margin: 0 auto;
   }
 }
 
@@ -401,7 +407,7 @@ body {
   grid-template-rows: 1fr 1fr;
   row-gap: 34px;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 
@@ -428,7 +434,7 @@ body {
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 }
@@ -468,15 +474,19 @@ body {
 }
 
 .images-slider-wrapper {
-  width: 845px;
+  width: 59%;
   height: 551px;
   padding-top: 107px;
   background: $bg-color;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 1000px) {
     width: auto;
-    height: auto;
+    height: 780px;
     padding: 0 18px 36px;
+  }
+
+  @media screen and (max-width: 425px) {
+    height: auto;
   }
 }
 
@@ -490,7 +500,11 @@ body {
   text-transform: uppercase;
   margin-bottom: 53px;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (min-width: 426px) and (max-width: 1024px) {
+    width: 550px;
+  }
+
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 }
@@ -522,7 +536,7 @@ body {
   width: 100%;
   margin-right: 21px;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     margin: 0;
     margin-bottom: 36px;
   }
@@ -541,7 +555,15 @@ body {
 
   @include transitions();
 
-  @media screen and (max-width: 375px) {
+  @media screen and (min-width: 426px) and (max-width: 1024px) {
+    top: 174px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    top: 213px;
+  }
+
+  @media screen and (max-width: 425px) {
     top: 103px;
     height: 12px;
     width: 7px;
@@ -562,7 +584,7 @@ body {
 .images-slider__nav-right {
   right: 45px;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     right: 14px;
   }
 }
@@ -571,7 +593,7 @@ body {
   left: 45px;
   padding: 18px 23px 19px 21px;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     left: 14px;
     top: 103px;
     padding: 9px 14px 15px 15px;
@@ -594,7 +616,7 @@ body {
     font-family: $futura-book-c;
     color: #fff;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
       font-size: 14px;
       line-height: 19px;
     }
@@ -607,14 +629,14 @@ body {
       color: $elements-color;
       margin-bottom: 9px;
 
-      @media screen and (max-width: 375px) {
+      @media screen and (max-width: 425px) {
         font-size: 14px;
         line-height: 19px;
       }
     }
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     display: grid;
   }
 }
@@ -626,7 +648,11 @@ body {
   background: #fff;
   position: relative;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (min-width: 426px) and (max-width: 1420px) {
+    height: 1135px;
+  }
+
+  @media screen and (max-width: 425px) {
     background: $bg-color;
     height: 940px;
     padding: 0 18px;
@@ -636,11 +662,22 @@ body {
 .repair-info {
   position: absolute;
   height: 1105px;
-  width: 817px;
+  //width: 817px;
+  width: 58%;
   top: -272px;
-  left: 310px;
+  //left: 310px;
+  right: 22%;
 
-  @media screen and (max-width: 375px) {
+  // @media screen and (min-width: 426px) and (max-width: 1024px) {
+  //   right: 8%;
+  // }
+
+  @media screen and (min-width: 426px) and (max-width: 1000px) {
+    width: 80%;
+    right: 10%;
+  }
+
+  @media screen and (max-width: 425px) {
     position: unset;
     height: auto;
     width: 100%;
@@ -694,16 +731,16 @@ body {
     height: 100%;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     height: 207px;
   }
 }
 
 .repair-info__content {
   position: relative;
-  width: 673px;
+  //width: 673px;
+  width: 81%;
   padding-top: 34px;
-  height: 130px;
   margin: 0 auto 91px;
   font-size: 20px;
   line-height: 34px;
@@ -720,7 +757,7 @@ body {
     border: 1px solid $elements-color;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     font-size: 14px;
     line-height: 24px;
     width: 100%;
@@ -736,9 +773,10 @@ body {
 
 .repair-info__form {
   width: 769px;
+  width: 92%;
   margin: 0 auto;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     width: 100%;
   }
 
@@ -752,7 +790,7 @@ body {
       'name tel button'
       'checkbox checkbox checkbox';
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 1420px) {
       grid-template-columns: 1fr;
       row-gap: 50px;
       grid-template-rows: 51px 51px 51px 511;
@@ -772,7 +810,7 @@ body {
     font-family: $futura-book-c;
     color: rgba(54, 54, 54, 0.5);
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
       color: rgba(255, 255, 255, 0.5);
     }
   }
@@ -796,7 +834,7 @@ body {
       outline: none;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
       color: #fff;
       border-color: rgba(255, 255, 255, 0.15);
       line-height: 25px;
@@ -831,7 +869,7 @@ body {
   justify-self: center;
   align-self: end;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     justify-self: left;
   }
 
@@ -841,7 +879,7 @@ body {
     font-family: $futura-book-c;
     color: #181818;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
       color: #fff;
     }
   }
@@ -909,14 +947,18 @@ body {
 .repair-types-wrapper {
   height: 833px;
   background: #fff;
-  padding: 0 100px;
+  padding: 0 98px 0 100px;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 768px) {
     padding: 0;
     padding-top: 83px;
     padding-left: 18px;
     padding-right: 18px;
     width: auto;
+    height: 710px;
+  }
+
+  @media screen and (max-width: 425px) {
     height: 100%;
   }
 }
@@ -970,12 +1012,13 @@ body {
 }
 
 .cards-wrapper {
-  width: 1238px;
+  //width: 1238px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     width: 100%;
     height: 100%;
     flex-direction: column;
@@ -984,10 +1027,19 @@ body {
 
 .repair-types__item {
   height: 608px;
-  width: 392px;
+  //width: 392px;
+  width: 32%;
   position: relative;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (min-width: 426px) and (max-width: 1024px) {
+    height: 580px;
+  }
+
+  @media screen and (min-width: 426px) and (max-width: 768px) {
+    height: 560px;
+  }
+
+  @media screen and (max-width: 425px) {
     margin-bottom: 59px;
     width: 100%;
   }
@@ -1001,16 +1053,30 @@ body {
   }
 
   .item__list-wrapper {
-    width: 296px;
+    //width: 296px;
+    width: 76%;
     height: 261px;
     background: #fff;
     position: absolute;
     padding: 25px 0 0 34px;
     top: 294px;
-    left: 31px;
+    //@at-rootleft: 31px;
+    left: 8%;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
 
-    @media screen and (max-width: 375px) {
+    @media screen and (min-width: 426px) and (max-width: 1024px) {
+      top: 248px;
+      left: 6%;
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 768px) {
+      padding: 24px 0 0 23px;
+      width: 82%;
+      top: 225px;
+      left: 4%;
+    }
+
+    @media screen and (max-width: 425px) {
       left: -1px;
     }
   }
@@ -1042,12 +1108,22 @@ body {
     color: #fff;
     position: absolute;
     bottom: 0;
-    left: 31px;
+    //left: 31px;
+    left: 8%;
     padding: 17px 21px;
     background: $elements-color;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
 
-    @media screen and (max-width: 375px) {
+    @media screen and (min-width: 426px) and (max-width: 1000px) {
+      font-size: 17px;
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 768px) {
+      font-size: 16px;
+      left: 4%;
+    }
+
+    @media screen and (max-width: 425px) {
       left: -1px;
     }
   }
@@ -1060,7 +1136,15 @@ body {
   display: flex;
   background: #fff;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (min-width: 426px) and (max-width: 1369px) {
+    height: 760px;
+  }
+
+  @media screen and (min-width: 426px) and (max-width: 1000px) {
+    height: 700px;
+  }
+
+  @media screen and (max-width: 425px) {
     display: none;
   }
 }
@@ -1070,6 +1154,10 @@ body {
   height: 100%;
   position: relative;
   overflow: hidden;
+
+  @media screen and (min-width: 426px) and (max-width: 1369px) {
+    display: none;
+  }
 
   .background-circle {
     position: absolute;
@@ -1143,6 +1231,11 @@ body {
 .request-form-wrapper {
   width: 605px;
   padding-top: 110px;
+
+  @media screen and (max-width: 1369px) {
+    margin: 0 auto;
+    padding-top: 0;
+  }
 }
 
 .request-form {
@@ -1152,6 +1245,10 @@ body {
   background: #131313;
   box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
   margin-bottom: 38px;
+
+  @media screen and (max-width: 1369px) {
+    margin: 0 auto 38px;
+  }
 
   .form__group {
     width: 100%;
@@ -1223,6 +1320,11 @@ body {
   padding: 18px 44px 19px 45px;
   margin-left: 178px;
 
+  @media screen and (max-width: 1369px) {
+    display: block;
+    margin: 0 auto;
+  }
+
   &:hover {
     cursor: pointer;
   }
@@ -1232,6 +1334,10 @@ body {
   display: flex;
   margin-left: 31px;
   align-items: center;
+
+  @media screen and (min-width: 426px) and (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .request-information__img {
@@ -1258,7 +1364,7 @@ body {
   display: flex;
   position: relative;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     height: 220px;
     width: 100%;
     background: #fff;
@@ -1266,10 +1372,10 @@ body {
 }
 
 .repair-styles__menu-wparrer {
-  width: 510px;
-  padding: 137px 0 97px 99px;
+  width: 35%;
+  padding: 137px 0 97px 7%;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     padding: 0;
     width: 100%;
   }
@@ -1285,7 +1391,7 @@ body {
   text-transform: uppercase;
   color: $elements-color;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     width: 100%;
     text-align: center;
   }
@@ -1295,7 +1401,7 @@ body {
   width: 299px;
   height: 516px;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     display: none;
   }
 }
@@ -1335,17 +1441,24 @@ body {
   }
 }
 
-.mobile-slider {
+.mobile-slider-wrapper {
   display: none;
-  background: #e3b873;
-  width: 340px;
+  width: 100%;
   height: 242px;
   bottom: -121px;
-  left: 18px;
   position: absolute;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     display: block;
+  }
+}
+
+.mobile-slider {
+  position: relative;
+  margin: 0 10%;
+
+  .mobile-slider__image {
+    width: 100%;
   }
 
   .mobile-slider__nav-right,
@@ -1388,13 +1501,21 @@ body {
 }
 
 .repair-styles__images-wrapper {
-  width: 751px;
+  width: 52%;
   height: 1034px;
   margin-top: -120px;
   columns: 2;
   column-gap: 43px;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (min-width: 426px) and (max-width: 1318px) {
+    margin-left: 50px;
+  }
+
+  @media screen and (min-width: 426px) and (max-width: 768px) {
+    width: 40%;
+  }
+
+  @media screen and (max-width: 425px) {
     display: none;
   }
 
@@ -1409,16 +1530,29 @@ body {
   .repair-styles__image:nth-child(4) {
     margin-bottom: 80px;
   }
+
+  .repair-styles__image:nth-child(3),
+  .repair-styles__image:nth-child(4) {
+    @media screen and (min-width: 426px) and (max-width: 1318px) {
+      display: none;
+    }
+  }
 }
 
 /* DESIGNS */
 
 .designs {
-  padding-top: 153px;
+  padding: 153px 100px 1px 100px;
   height: 467px;
   background: #fff;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 768px) {
+    padding-left: 18px;
+    padding-right: 18px;
+    height: 398px;
+  }
+
+  @media screen and (max-width: 425px) {
     height: auto;
     background: $bg-color;
     padding-left: 18px;
@@ -1435,7 +1569,7 @@ body {
   color: #181818;
   margin-bottom: 12px;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     color: #fff;
     font-size: 22px;
     line-height: 30px;
@@ -1480,9 +1614,12 @@ body {
   color: #363636;
   margin: 0 auto 39px;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
     height: auto;
+  }
+
+  @media screen and (max-width: 425px) {
     color: #fff;
     font-size: 15px;
     line-height: 20px;
@@ -1490,16 +1627,24 @@ body {
 }
 
 .designs__item {
-  width: 392px;
+  width: 31%;
   position: relative;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     width: 100%;
     margin-bottom: 60px;
   }
 
   &:nth-child(1) {
     height: 531px;
+
+    @media screen and (min-width: 426px) and (max-width: 1024px) {
+      height: 482px;
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 768px) {
+      height: 452px;
+    }
   }
 
   &:nth-child(1) .item__list-wrapper {
@@ -1508,18 +1653,49 @@ body {
 
   &:nth-child(2) {
     height: 607px;
+
+    @media screen and (min-width: 426px) and (max-width: 1024px) {
+      height: 551px;
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 768px) {
+      height: 530px;
+    }
   }
 
   &:nth-child(2) .item__list-wrapper {
     height: 261px;
+
+    @media screen and (min-width: 426px) and (max-width: 1024px) {
+      width: 77%;
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 768px) {
+      width: 80%;
+    }
   }
 
   &:nth-child(3) {
     height: 735px;
+
+    @media screen and (min-width: 426px) and (max-width: 1024px) {
+      height: 690px;
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 768px) {
+      height: 663px;
+    }
   }
 
   &:nth-child(3) .item__list-wrapper {
     height: 389px;
+    @media screen and (min-width: 426px) and (max-width: 1024px) {
+      width: 77%;
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 768px) {
+      width: 81%;
+    }
   }
 
   .item__image {
@@ -1527,15 +1703,26 @@ body {
   }
 
   .item__list-wrapper {
-    width: 296px;
+    width: 75%;
     background: #fff;
     position: absolute;
     padding: 25px 0 0 34px;
     top: 294px;
-    left: 31px;
+    left: 8%;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
 
-    @media screen and (max-width: 375px) {
+    @media screen and (min-width: 426px) and (max-width: 1024px) {
+      top: 228px;
+      left: 6%;
+      width: 79%;
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 768px) {
+      padding: 25px 0 0 23px;
+      top: 204px;
+    }
+
+    @media screen and (max-width: 425px) {
       left: 0;
       width: 236px;
     }
@@ -1568,12 +1755,20 @@ body {
     color: #fff;
     position: absolute;
     bottom: 0;
-    left: 31px;
+    left: 8%;
     padding: 17px 72px 17px 33px;
     background: $elements-color;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
 
-    @media screen and (max-width: 375px) {
+    @media screen and (min-width: 426px) and (max-width: 1024px) {
+      left: 6%;
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 768px) {
+      font-size: 15px;
+    }
+
+    @media screen and (max-width: 425px) {
       left: 0;
       padding: 11px 46px 11px 46px;
     }
@@ -1588,13 +1783,21 @@ body {
   padding: 428px 101px 0 99px;
   display: flex;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (min-width: 426px) and (max-width: 1024px) {
+    height: 500px;
+  }
+
+  @media screen and (max-width: 425px) {
     display: none;
   }
 }
 
 .left-slider-wrapper {
   width: 474px;
+
+  @media screen and (min-width: 426px) and (max-width: 1024px) {
+    display: none;
+  }
 
   .projects-slider__slider-nav {
     width: 287px;
@@ -1673,17 +1876,25 @@ body {
 }
 
 .right-part {
-  width: 765px;
+  width: 61%;
   padding-top: 71px;
+
+  @media screen and (min-width: 426px) and (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .steps-nav {
   display: grid;
   grid-template-columns: 127px 127px 127px;
   grid-template-rows: 71px 71px;
-  column-gap: 201px;
+  column-gap: 25%;
   row-gap: 36px;
   margin-bottom: 54px;
+
+  @media screen and (max-width: 1210px) {
+    column-gap: 16%;
+  }
 }
 
 .steps-nav__nav-item {
@@ -1740,7 +1951,7 @@ body {
   }
 }
 
-.stes-image {
+.steps-image {
   width: 100%;
 }
 
@@ -1751,7 +1962,11 @@ body {
   height: 485px;
   background: #fff;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (min-width: 426px) and (max-width: 768px) {
+    height: 423px;
+  }
+
+  @media screen and (max-width: 425px) {
     height: auto;
     background: $bg-color;
   }
@@ -1759,15 +1974,26 @@ body {
 
 .team {
   position: absolute;
+  width: 74%;
   height: 843px;
-  width: 1063px;
   top: -406px;
-  left: 171px;
+  right: 13%;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (min-width: 426px) and (max-width: 1024px) {
+    width: 88%;
+    right: 6%;
+  }
+
+  @media screen and (min-width: 426px) and (max-width: 768px) {
+    width: 94%;
+    right: 3%;
+  }
+
+  @media screen and (max-width: 425px) {
     position: unset;
     width: auto;
     height: auto;
+    padding-bottom: 1px;
   }
 }
 
@@ -1818,7 +2044,7 @@ body {
   color: #fff;
   margin: 0 auto 38px;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     width: 340px;
     height: 42px;
     font-size: 15px;
@@ -1827,12 +2053,12 @@ body {
 }
 
 .team__cards-wrapper {
-  width: 1063px;
+  width: 100%;
   margin: 0 auto 53px;
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     width: 100%;
     height: 100%;
     flex-direction: column;
@@ -1842,12 +2068,17 @@ body {
 
 .team__card {
   height: 414px;
-  width: 272px;
+  //width: 272px;
+  width: 26%;
   padding-left: 35px;
   padding-top: 35px;
   position: relative;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (min-width: 426px) and (max-width: 768px) {
+    height: 349px;
+  }
+
+  @media screen and (max-width: 425px) {
     width: 304px;
     margin: 0 auto 54px;
   }
@@ -1857,14 +2088,28 @@ body {
   }
 
   .card__description {
-    width: 233px;
+    width: 75%;
     height: 115px;
     padding-top: 22px;
     position: absolute;
     bottom: 0;
-    left: 60px;
+    left: 19%;
     background: #fff;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+
+    @media screen and (min-width: 426px) and (max-width: 1024px) {
+      bottom: 10px;
+      padding-top: 13px;
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 768px) {
+      width: 80%;
+      left: 18%;
+    }
+
+    @media screen and (max-width: 425px) {
+      width: 71.5%;
+    }
 
     .card__description-name {
       font-size: 18px;
@@ -1892,22 +2137,38 @@ body {
     text-transform: uppercase;
     color: #fff;
     background: $elements-color;
-    padding: 13px 25px 14px 24px;
+    padding: 13px 9% 14px 8%;
     position: absolute;
     bottom: 0;
-    left: 60px;
+    left: 19%;
+
+    @media screen and (min-width: 426px) and (max-width: 1024px) {
+      padding: 13px 3% 14px 2%;
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 768px) {
+      left: 18%;
+    }
+  }
+
+  &:nth-child(3) .card__description {
+    @media screen and (max-width: 425px) {
+      width: 69.5%;
+    }
   }
 
   &:nth-child(3) .card__footer {
     padding-right: 19px;
+
+    @media screen and (min-width: 426px) and (max-width: 1024px) {
+      padding: 13px 2% 14px 2%;
+    }
   }
 
   .card__logo {
     position: absolute;
     top: 0;
     left: 0;
-    //width: 70px;
-    //height: 70px;
     padding: 13px;
     background: $elements-color;
     box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
@@ -1935,7 +2196,7 @@ body {
     border: 1px solid #e3b873;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     display: none;
   }
 }
@@ -1945,10 +2206,20 @@ body {
 .testimonials {
   height: 999px;
   background: #fff;
-  padding: 0 101px;
+  padding: 0 7%;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (min-width: 426px) and (max-width: 1024px) {
+    height: 1530px;
+  }
+
+  @media screen and (max-width: 425px) {
     display: none;
+  }
+
+  .cards-wrapper {
+    @media screen and (min-width: 426px) and (max-width: 1024px) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -1998,18 +2269,33 @@ body {
   text-align: center;
   color: #363636;
   margin: 0 auto 42px;
+
+  @media screen and (min-width: 426px) and (max-width: 1024px) {
+    margin-bottom: 70px;
+  }
 }
 
 .testimonials__card {
   position: relative;
-  width: 376px;
+  width: 30%;
   height: 455px;
+
+  @media screen and (min-width: 426px) and (max-width: 1024px) {
+    width: 100%;
+    height: 320px;
+    margin-bottom: 40px;
+  }
 
   .card__content {
     height: 404px;
     padding: 24px 31px 0 20px;
     background: #fff;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+
+    @media screen and (max-width: 1024px) {
+      height: auto;
+      padding: 24px 31px 14px 20px;
+    }
   }
 
   .card__content-header {
@@ -2086,7 +2372,7 @@ body {
   background: url(/assets/images/contacts-bg.png);
   position: relative;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     height: auto;
     background: #181818;
   }
@@ -2094,14 +2380,14 @@ body {
 
 .contacts {
   position: absolute;
-  left: 255px;
+  left: 18%;
   top: -222px;
-  width: 925px;
+  width: 64%;
   height: 1100px;
   display: flex;
   flex-direction: column;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     position: unset;
     width: 100%;
     height: auto;
@@ -2112,10 +2398,10 @@ body {
   height: 377px;
   display: block;
   background: #181818;
-  padding: 34px 196px;
+  padding: 34px 21%;
   margin-bottom: 52px;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     padding: 0 18px;
     height: auto;
   }
@@ -2133,7 +2419,7 @@ body {
   .form__group {
     margin-bottom: 46px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
       &:nth-child(3) {
         margin-bottom: 21px;
       }
@@ -2145,7 +2431,7 @@ body {
     justify-content: space-between;
     margin-bottom: 46px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
       flex-direction: column;
       margin-bottom: 0;
     }
@@ -2154,7 +2440,7 @@ body {
       width: 231px;
       margin-bottom: 0;
 
-      @media screen and (max-width: 375px) {
+      @media screen and (max-width: 425px) {
         width: 100%;
         margin-bottom: 63px;
       }
@@ -2187,7 +2473,7 @@ body {
     width: 288px;
     margin: 0 auto 40px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
       margin: 0 0 40px;
     }
   }
@@ -2206,12 +2492,14 @@ body {
     color: #fff;
     background-color: $elements-color;
     padding: 8px 64px 11px 64px;
+    margin: 0 auto;
+    display: block;
 
     &:hover {
       cursor: pointer;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
       margin-left: 0;
       padding: 8px 0 11px 0;
       width: 100%;
@@ -2224,7 +2512,11 @@ body {
   width: 589px;
   margin: 0 auto 43px;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (min-width: 426px) and (max-width: 768px) {
+    width: auto;
+  }
+
+  @media screen and (max-width: 425px) {
     width: auto;
     padding: 0 18px;
     order: 2;
@@ -2239,7 +2531,7 @@ body {
     color: $elements-color;
     margin-bottom: 26px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
       font-size: 18px;
       line-height: 25px;
     }
@@ -2280,7 +2572,7 @@ body {
 .contacts__map {
   height: 465px;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     padding: 0 18px;
     height: 255px;
     margin-bottom: 41px;
@@ -2292,9 +2584,17 @@ body {
 .footer {
   height: 37px;
   background: $bg-color;
-  padding: 48px 91px 48px 92px;
+  padding: 48px 7% 48px 7%;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (min-width: 426px) and (max-width: 1024px) {
+    padding: 48px 7% 20px 7%;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 425px) {
     display: none;
   }
 
@@ -2312,32 +2612,35 @@ body {
     font-family: $futura-demi-c;
   }
 
-  .footer__navbar > ul {
-    display: flex;
-    padding: 0;
-    width: 581px;
-    justify-content: space-between;
+  .footer__navbar {
+    width: 47%;
+    ul {
+      display: flex;
+      padding: 0;
+      width: 100%;
+      justify-content: space-between;
 
-    .footer__item {
-      list-style: none;
-    }
-
-    .footer__link {
-      font-size: 14px;
-      line-height: 16px;
-      text-decoration: none;
-      color: #fff;
-      font-family: $futura-book-c;
-
-      @include transitions();
-
-      &--active {
-        color: $elements-color;
-        text-decoration: none;
+      .footer__item {
+        list-style: none;
       }
 
-      &:hover {
-        color: $elements-color;
+      .footer__link {
+        font-size: 14px;
+        line-height: 16px;
+        text-decoration: none;
+        color: #fff;
+        font-family: $futura-book-c;
+
+        @include transitions();
+
+        &--active {
+          color: $elements-color;
+          text-decoration: none;
+        }
+
+        &:hover {
+          color: $elements-color;
+        }
       }
     }
   }
@@ -2370,5 +2673,9 @@ body {
     padding: 13px 33px;
     font-family: $futura-demi-c;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+
+    @media screen and (min-width: 426px) and (max-width: 1024px) {
+      display: none;
+    }
   }
 }
