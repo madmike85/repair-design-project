@@ -178,7 +178,7 @@ body {
 }
 
 .intro__main {
-  background-image: url(/assets/images/image-4.3.png);
+  background-image: url(../../assets/images/image-4.3.png);
   //width: 1298px;
   width: 91%;
   padding: 318px 0 0 60px;
@@ -186,7 +186,7 @@ body {
   @media screen and (max-width: 425px) {
     width: 100%;
     padding: 85px 18px 0 18px;
-    background-image: url(/assets/images/intro-main-mobile.png);
+    background-image: url(../../assets/images/intro-main-mobile.png);
   }
 }
 
@@ -1360,7 +1360,7 @@ body {
 
 .repair-styles {
   height: 864px;
-  background: url(/assets/images/image-5.1.png);
+  background: url(../../assets/images/image-5.1.png);
   display: flex;
   position: relative;
 
@@ -1509,6 +1509,7 @@ body {
 
   @media screen and (min-width: 426px) and (max-width: 1318px) {
     margin-left: 50px;
+    columns: none;
   }
 
   @media screen and (min-width: 426px) and (max-width: 768px) {
@@ -2369,7 +2370,7 @@ body {
 
 .contacts-wrapper {
   height: 953px;
-  background: url(/assets/images/contacts-bg.png);
+  background: url(../../assets/images/contacts-bg.png);
   position: relative;
 
   @media screen and (max-width: 425px) {
