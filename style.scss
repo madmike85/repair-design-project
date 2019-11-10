@@ -32,6 +32,10 @@ body {
   background-color: $bg-color;
   padding: 24px 7% 22px 6%;
 
+  @media screen and (min-width: 426px) and (max-width: 1085px) {
+    padding: 24px 3% 22px 3%;
+  }
+
   @media screen and (max-width: 425px) {
     height: 10px;
     padding: 23px 18px 24px 18px;
@@ -60,6 +64,10 @@ body {
 .header__navbar {
   width: 47%;
 
+  @media screen and (max-width: 1000px) {
+    width: 55%;
+  }
+
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -87,6 +95,7 @@ body {
       &--active {
         color: $elements-color;
         text-decoration: none;
+        font-family: $futura-book-c;
       }
 
       &:hover {
@@ -112,9 +121,8 @@ body {
 }
 
 .header__button {
-  border: 1px solid $elements-color;
+  border: 1px solid #fff;
   color: #fff;
-  background-color: $elements-color;
   border-radius: 2px;
   display: block;
   text-decoration: none;
@@ -124,6 +132,13 @@ body {
   padding: 13px 33px;
   font-family: $futura-demi-c;
   box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+
+  @include transitions();
+
+  &:hover {
+    background-color: $elements-color;
+    border-color: $elements-color;
+  }
 
   @media screen and (max-width: 1024px) {
     display: none;
@@ -147,7 +162,7 @@ body {
   width: 81px;
   position: relative;
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 600px) {
     display: none;
   }
 }
@@ -179,9 +194,13 @@ body {
 
 .intro__main {
   background-image: url(../../assets/images/image-4.3.png);
-  //width: 1298px;
   width: 91%;
   padding: 318px 0 0 60px;
+
+  @media screen and (max-width: 600px) {
+    width: 93.4%;
+    padding: 248px 0 0 31px;
+  }
 
   @media screen and (max-width: 425px) {
     width: 100%;
@@ -195,6 +214,7 @@ body {
   font-size: 23px;
   line-height: 31px;
   font-family: $yeseva-one;
+  font-weight: 500;
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -219,6 +239,10 @@ body {
   height: 89px;
   margin-bottom: 41px;
 
+  @media screen and (max-width: 600px) {
+    width: 375px;
+  }
+
   @media screen and (max-width: 425px) {
     font-size: 18px;
     line-height: 24px;
@@ -231,7 +255,7 @@ body {
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 490px) {
     flex-direction: column;
     width: 100%;
   }
@@ -257,6 +281,10 @@ body {
     border-color: $elements-color;
     cursor: pointer;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 360px;
   }
 
   @media screen and (max-width: 425px) {
@@ -288,6 +316,7 @@ body {
   font-size: 14px;
   line-height: 19px;
   font-family: $yeseva-one;
+  font-weight: 500;
   text-transform: uppercase;
   color: #fff;
 }
@@ -354,6 +383,7 @@ body {
   font-size: 27px;
   line-height: 37px;
   font-family: $yeseva-one;
+  font-weight: 500;
   letter-spacing: -0.07em;
   text-transform: uppercase;
   color: $elements-color;
@@ -421,6 +451,7 @@ body {
       font-size: 18px;
       line-height: 25px;
       font-family: $yeseva-one;
+      font-weight: 500;
       text-transform: uppercase;
       color: $elements-color;
       margin-bottom: 9px;
@@ -497,8 +528,13 @@ body {
   font-size: 14px;
   line-height: 19px;
   font-family: $yeseva-one;
+  font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 53px;
+
+  @media screen and (max-width: 1100px) {
+    width: 552px;
+  }
 
   @media screen and (min-width: 426px) and (max-width: 1024px) {
     width: 550px;
@@ -625,6 +661,7 @@ body {
       font-size: 18px;
       line-height: 25px;
       font-family: $yeseva-one;
+      font-weight: 500;
       text-transform: uppercase;
       color: $elements-color;
       margin-bottom: 9px;
@@ -688,6 +725,7 @@ body {
   font-size: 20px;
   line-height: 28px;
   font-family: $yeseva-one;
+  font-weight: 500;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
@@ -918,7 +956,8 @@ body {
       background: #fff;
       width: 2px;
       height: 2px;
-      box-shadow: 2px 0 0 #fff, 4px 0 0 #fff, 4px -2px 0 #fff, 4px -4px 0 #fff, 4px -6px 0 #fff, 4px -8px 0 #fff;
+      box-shadow: 2px 0 0 #fff, 4px 0 0 #fff, 4px -2px 0 #fff, 4px -4px 0 #fff, 4px -6px 0 #fff,
+        4px -8px 0 #fff;
       transform: rotate(45deg);
     }
   }
@@ -949,6 +988,10 @@ body {
   background: #fff;
   padding: 0 98px 0 100px;
 
+  @media screen and (max-width: 980px) {
+    padding: 0px 40px 0 40px;
+  }
+
   @media screen and (max-width: 768px) {
     padding: 0;
     padding-top: 83px;
@@ -958,7 +1001,7 @@ body {
     height: 710px;
   }
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 600px) {
     height: 100%;
   }
 }
@@ -971,6 +1014,7 @@ body {
   font-size: 20px;
   line-height: 28px;
   font-family: $yeseva-one;
+  font-weight: 500;
   text-align: center;
   text-transform: uppercase;
   color: #181818;
@@ -1018,7 +1062,7 @@ body {
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 600px) {
     width: 100%;
     height: 100%;
     flex-direction: column;
@@ -1027,21 +1071,37 @@ body {
 
 .repair-types__item {
   height: 608px;
-  //width: 392px;
   width: 32%;
   position: relative;
 
+  @media screen and (max-width: 1100px) {
+    height: 576px;
+  }
+
   @media screen and (min-width: 426px) and (max-width: 1024px) {
     height: 580px;
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 860px) {
+    height: 564px;
   }
 
   @media screen and (min-width: 426px) and (max-width: 768px) {
     height: 560px;
   }
 
-  @media screen and (max-width: 425px) {
+  @media screen and (min-width: 426px) and (max-width: 720px) {
+    height: 517px;
+  }
+
+  @media screen and (min-width: 426px) and (max-width: 665px) {
+    height: 567px;
+  }
+
+  @media screen and (max-width: 600px) {
     margin-bottom: 59px;
     width: 100%;
+    height: 697px;
   }
 
   &:hover {
@@ -1064,9 +1124,19 @@ body {
     left: 8%;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
 
+    @media screen and (max-width: 1100px) {
+      top: 235px;
+    }
+
     @media screen and (min-width: 426px) and (max-width: 1024px) {
       top: 248px;
       left: 6%;
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 860px) {
+      top: 235px;
+      width: 81%;
+      padding: 25px 0 0 17px;
     }
 
     @media screen and (min-width: 426px) and (max-width: 768px) {
@@ -1076,8 +1146,20 @@ body {
       left: 4%;
     }
 
-    @media screen and (max-width: 425px) {
+    @media screen and (min-width: 426px) and (max-width: 720px) {
+      padding: 24px 0 0 17px;
+      width: 85%;
+      top: 189px;
+      left: 4%;
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 665px) {
+      height: 310px;
+    }
+
+    @media screen and (max-width: 600px) {
       left: -1px;
+      top: 372px;
     }
   }
 
@@ -1085,6 +1167,7 @@ body {
     font-size: 18px;
     line-height: 25px;
     font-family: $yeseva-one;
+    font-weight: 500;
     color: #363636;
     margin-bottom: 13px;
   }
@@ -1104,6 +1187,7 @@ body {
     font-size: 18px;
     line-height: 25px;
     font-family: $yeseva-one;
+    font-weight: 500;
     text-transform: uppercase;
     color: #fff;
     position: absolute;
@@ -1118,12 +1202,26 @@ body {
       font-size: 17px;
     }
 
+    @media screen and (min-width: 769px) and (max-width: 860px) {
+      padding: 17px 15%;
+      font-size: 12px;
+    }
+
     @media screen and (min-width: 426px) and (max-width: 768px) {
       font-size: 16px;
+      padding: 17px 15%;
+      font-size: 12px;
       left: 4%;
     }
 
-    @media screen and (max-width: 425px) {
+    @media screen and (min-width: 426px) and (max-width: 665px) {
+      font-size: 16px;
+      padding: 17px 7%;
+      font-size: 12px;
+      left: 4%;
+    }
+
+    @media screen and (max-width: 600px) {
       left: -1px;
     }
   }
@@ -1209,6 +1307,7 @@ body {
   font-size: 18px;
   line-height: 25px;
   font-family: $yeseva-one;
+  font-weight: 500;
   text-align: center;
   margin-right: 2px;
   color: #fff;
@@ -1388,6 +1487,7 @@ body {
   font-size: 27px;
   line-height: 37px;
   font-family: $yeseva-one;
+  font-weight: 500;
   text-transform: uppercase;
   color: $elements-color;
 
@@ -1508,7 +1608,7 @@ body {
   column-gap: 43px;
 
   @media screen and (min-width: 426px) and (max-width: 1318px) {
-    margin-left: 50px;
+    margin-left: 40px;
     columns: none;
   }
 
@@ -1516,7 +1616,7 @@ body {
     width: 40%;
   }
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 720px) {
     display: none;
   }
 
@@ -1547,10 +1647,20 @@ body {
   height: 467px;
   background: #fff;
 
+  @media screen and (max-width: 1050px) {
+    padding-left: 18px;
+    padding-right: 18px;
+    height: 447px;
+  }
+
   @media screen and (max-width: 768px) {
     padding-left: 18px;
     padding-right: 18px;
     height: 398px;
+  }
+
+  @media screen and (max-width: 700px) {
+    height: auto;
   }
 
   @media screen and (max-width: 425px) {
@@ -1565,6 +1675,7 @@ body {
   font-size: 20px;
   line-height: 28px;
   font-family: $yeseva-one;
+  font-weight: 500;
   text-align: center;
   text-transform: uppercase;
   color: #181818;
@@ -1627,11 +1738,19 @@ body {
   }
 }
 
+.cadrs-wrapper__design {
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+  }
+}
+
 .designs__item {
   width: 31%;
   position: relative;
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 700px) {
     width: 100%;
     margin-bottom: 60px;
   }
@@ -1639,28 +1758,49 @@ body {
   &:nth-child(1) {
     height: 531px;
 
+    @media screen and (min-width: 1025px) and (max-width: 1100px) {
+      height: 510px;
+    }
+
     @media screen and (min-width: 426px) and (max-width: 1024px) {
       height: 482px;
     }
 
     @media screen and (min-width: 426px) and (max-width: 768px) {
-      height: 452px;
+      height: 498px;
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 700px) {
+      height: auto;
     }
   }
 
   &:nth-child(1) .item__list-wrapper {
     height: 186px;
+
+    @media screen and (min-width: 426px) and (max-width: 700px) {
+      top: auto;
+      bottom: 4%;
+    }
   }
 
   &:nth-child(2) {
     height: 607px;
+
+    @media screen and (min-width: 1025px) and (max-width: 1100px) {
+      height: 583px;
+    }
 
     @media screen and (min-width: 426px) and (max-width: 1024px) {
       height: 551px;
     }
 
     @media screen and (min-width: 426px) and (max-width: 768px) {
-      height: 530px;
+      height: 573px;
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 700px) {
+      height: auto;
     }
   }
 
@@ -1674,28 +1814,55 @@ body {
     @media screen and (min-width: 426px) and (max-width: 768px) {
       width: 80%;
     }
+
+    @media screen and (min-width: 426px) and (max-width: 700px) {
+      top: auto;
+      bottom: 4%;
+    }
   }
 
   &:nth-child(3) {
     height: 735px;
+
+    @media screen and (min-width: 1023px) and (max-width: 1210px) {
+      height: 750px;
+    }
+
+    @media screen and (min-width: 1025px) and (max-width: 1100px) {
+      height: 724px;
+    }
 
     @media screen and (min-width: 426px) and (max-width: 1024px) {
       height: 690px;
     }
 
     @media screen and (min-width: 426px) and (max-width: 768px) {
-      height: 663px;
+      height: 700px;
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 700px) {
+      height: auto;
     }
   }
 
   &:nth-child(3) .item__list-wrapper {
     height: 389px;
+
+    @media screen and (min-width: 1023px) and (max-width: 1210px) {
+      height: 400px;
+    }
+
     @media screen and (min-width: 426px) and (max-width: 1024px) {
       width: 77%;
     }
 
     @media screen and (min-width: 426px) and (max-width: 768px) {
       width: 81%;
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 700px) {
+      top: auto;
+      bottom: 4%;
     }
   }
 
@@ -1712,6 +1879,10 @@ body {
     left: 8%;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
 
+    @media screen and (min-width: 1025px) and (max-width: 1100px) {
+      top: 266px;
+    }
+
     @media screen and (min-width: 426px) and (max-width: 1024px) {
       top: 228px;
       left: 6%;
@@ -1720,7 +1891,6 @@ body {
 
     @media screen and (min-width: 426px) and (max-width: 768px) {
       padding: 25px 0 0 23px;
-      top: 204px;
     }
 
     @media screen and (max-width: 425px) {
@@ -1733,6 +1903,7 @@ body {
     font-size: 18px;
     line-height: 25px;
     font-family: $yeseva-one;
+    font-weight: 500;
     color: #363636;
     margin-bottom: 13px;
   }
@@ -1752,6 +1923,7 @@ body {
     font-size: 18px;
     line-height: 25px;
     font-family: $yeseva-one;
+    font-weight: 500;
     text-transform: uppercase;
     color: #fff;
     position: absolute;
@@ -1767,6 +1939,10 @@ body {
 
     @media screen and (min-width: 426px) and (max-width: 768px) {
       font-size: 15px;
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 834px) {
+      padding: 17px 32px 17px 33px;
     }
 
     @media screen and (max-width: 425px) {
@@ -1786,6 +1962,10 @@ body {
 
   @media screen and (min-width: 426px) and (max-width: 1024px) {
     height: 500px;
+  }
+
+  @media screen and (max-width: 700px) {
+    height: 90px;
   }
 
   @media screen and (max-width: 425px) {
@@ -1823,6 +2003,7 @@ body {
     line-height: 37px;
     width: 210px;
     font-family: $yeseva-one;
+    font-weight: 500;
     text-transform: uppercase;
     color: $elements-color;
     margin-bottom: 92px;
@@ -1847,6 +2028,7 @@ body {
     font-size: 18px;
     line-height: 25px;
     font-family: $yeseva-one;
+    font-weight: 500;
     text-transform: uppercase;
     color: #fff;
     margin-bottom: 22px;
@@ -1857,6 +2039,7 @@ body {
     font-size: 15px;
     line-height: 23px;
     font-family: $yeseva-one;
+    font-weight: 500;
     text-transform: uppercase;
     color: $elements-color;
     margin-bottom: 15px;
@@ -1919,6 +2102,7 @@ body {
       font-size: 16px;
       line-height: 21px;
       font-family: $yeseva-one;
+      font-weight: 500;
       text-transform: uppercase;
       color: #fff;
       border-bottom: 1px solid $elements-color;
@@ -1938,6 +2122,7 @@ body {
     font-size: 16px;
     line-height: 21px;
     font-family: $yeseva-one;
+    font-weight: 500;
     text-transform: uppercase;
     color: #fff;
     border-bottom: 1px solid $elements-color;
@@ -1967,6 +2152,10 @@ body {
     height: 423px;
   }
 
+  @media screen and (max-width: 720px) {
+    height: 1558px;
+  }
+
   @media screen and (max-width: 425px) {
     height: auto;
     background: $bg-color;
@@ -1990,6 +2179,11 @@ body {
     right: 3%;
   }
 
+  @media screen and (max-width: 720px) {
+    height: auto;
+    padding-bottom: 1px;
+  }
+
   @media screen and (max-width: 425px) {
     position: unset;
     width: auto;
@@ -2002,6 +2196,7 @@ body {
   font-size: 20px;
   line-height: 28px;
   font-family: $yeseva-one;
+  font-weight: 500;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 12px;
@@ -2045,6 +2240,10 @@ body {
   color: #fff;
   margin: 0 auto 38px;
 
+  @media screen and (max-width: 480px) {
+    width: 400px;
+  }
+
   @media screen and (max-width: 425px) {
     width: 340px;
     height: 42px;
@@ -2059,6 +2258,13 @@ body {
   display: flex;
   justify-content: space-between;
 
+  @media screen and (max-width: 720px) {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
   @media screen and (max-width: 425px) {
     width: 100%;
     height: 100%;
@@ -2069,14 +2275,23 @@ body {
 
 .team__card {
   height: 414px;
-  //width: 272px;
   width: 26%;
   padding-left: 35px;
   padding-top: 35px;
   position: relative;
 
+  @media screen and (min-width: 426px) and (max-width: 850px) {
+    height: 382px;
+  }
+
   @media screen and (min-width: 426px) and (max-width: 768px) {
     height: 349px;
+  }
+
+  @media screen and (min-width: 426px) and (max-width: 720px) {
+    width: 304px;
+    height: 447px;
+    margin: 0 auto 54px;
   }
 
   @media screen and (max-width: 425px) {
@@ -2103,9 +2318,18 @@ body {
       padding-top: 13px;
     }
 
+    @media screen and (min-width: 426px) and (max-width: 850px) {
+      width: 85%;
+      left: auto;
+    }
+
     @media screen and (min-width: 426px) and (max-width: 768px) {
       width: 80%;
       left: 18%;
+    }
+
+    @media screen and (max-width: 720px) {
+      width: 71.5%;
     }
 
     @media screen and (max-width: 425px) {
@@ -2116,6 +2340,7 @@ body {
       font-size: 18px;
       line-height: 25px;
       font-family: $yeseva-one;
+      font-weight: 500;
       text-align: center;
       color: #181818;
       margin-bottom: 1px;
@@ -2134,6 +2359,7 @@ body {
     font-size: 13px;
     line-height: 20px;
     font-family: $yeseva-one;
+    font-weight: 500;
     text-align: center;
     text-transform: uppercase;
     color: #fff;
@@ -2145,6 +2371,10 @@ body {
 
     @media screen and (min-width: 426px) and (max-width: 1024px) {
       padding: 13px 3% 14px 2%;
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 850px) {
+      left: 16%;
     }
 
     @media screen and (min-width: 426px) and (max-width: 768px) {
@@ -2197,6 +2427,10 @@ body {
     border: 1px solid #e3b873;
   }
 
+  @media screen and (max-width: 700px) {
+    width: auto;
+  }
+
   @media screen and (max-width: 425px) {
     display: none;
   }
@@ -2213,6 +2447,10 @@ body {
     height: 1530px;
   }
 
+  @media screen and (min-width: 426px) and (max-width: 700px) {
+    height: 1875px;
+  }
+
   @media screen and (max-width: 425px) {
     display: none;
   }
@@ -2221,6 +2459,10 @@ body {
     @media screen and (min-width: 426px) and (max-width: 1024px) {
       flex-direction: column;
     }
+
+    @media screen and (min-width: 426px) and (max-width: 700px) {
+      height: auto;
+    }
   }
 }
 
@@ -2228,6 +2470,7 @@ body {
   font-size: 20px;
   line-height: 28px;
   font-family: $yeseva-one;
+  font-weight: 500;
   text-align: center;
   text-transform: uppercase;
   color: #181818;
@@ -2281,10 +2524,18 @@ body {
   width: 30%;
   height: 455px;
 
+  @media screen and (min-width: 1023px) and (max-width: 1150px) {
+    height: 504px;
+  }
+
   @media screen and (min-width: 426px) and (max-width: 1024px) {
     width: 100%;
     height: 320px;
     margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 426px) and (max-width: 700px) {
+    height: 433px;
   }
 
   .card__content {
@@ -2293,9 +2544,17 @@ body {
     background: #fff;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
 
+    @media screen and (min-width: 1023px) and (max-width: 1150px) {
+      height: 444px;
+    }
+
     @media screen and (max-width: 1024px) {
       height: auto;
       padding: 24px 31px 14px 20px;
+    }
+
+    @media screen and (min-width: 426px) and (max-width: 700px) {
+      height: 352px;
     }
   }
 
@@ -2316,6 +2575,7 @@ body {
       line-height: 23px;
       width: 178px;
       font-family: $yeseva-one;
+      font-weight: 500;
       color: #181818;
     }
   }
@@ -2360,6 +2620,7 @@ body {
       font-size: 17px;
       line-height: 24px;
       font-family: $yeseva-one;
+      font-weight: 500;
       text-transform: uppercase;
       color: #fff;
     }
@@ -2388,6 +2649,11 @@ body {
   display: flex;
   flex-direction: column;
 
+  @media screen and (min-width: 426px) and (max-width: 650px) {
+    left: 6%;
+    width: 89%;
+  }
+
   @media screen and (max-width: 425px) {
     position: unset;
     width: 100%;
@@ -2402,6 +2668,10 @@ body {
   padding: 34px 21%;
   margin-bottom: 52px;
 
+  @media screen and (min-width: 426px) and (max-width: 650px) {
+    padding: 34px 3%;
+  }
+
   @media screen and (max-width: 425px) {
     padding: 0 18px;
     height: auto;
@@ -2411,6 +2681,7 @@ body {
     font-size: 20px;
     line-height: 28px;
     font-family: $yeseva-one;
+    font-weight: 500;
     text-align: center;
     text-transform: uppercase;
     color: #fff;
@@ -2513,6 +2784,10 @@ body {
   width: 589px;
   margin: 0 auto 43px;
 
+  @media screen and (max-width: 780px) {
+    width: 500px;
+  }
+
   @media screen and (min-width: 426px) and (max-width: 768px) {
     width: auto;
   }
@@ -2527,6 +2802,7 @@ body {
     font-size: 20px;
     line-height: 28px;
     font-family: $yeseva-one;
+    font-weight: 500;
     text-align: center;
     text-transform: uppercase;
     color: $elements-color;
@@ -2548,11 +2824,18 @@ body {
   .socials__item {
     position: relative;
     display: block;
-    background: $elements-color;
     color: #fff;
     height: 28px;
     width: 28px;
     border-radius: 50%;
+    border: 1px solid #fff;
+
+    @include transitions();
+
+    &:hover {
+      background: $elements-color;
+      border-color: $elements-color;
+    }
 
     i {
       position: absolute;
@@ -2572,6 +2855,11 @@ body {
 
 .contacts__map {
   height: 465px;
+  object-fit: cover;
+
+  @media screen and (max-width: 1000px) {
+    height: 390px;
+  }
 
   @media screen and (max-width: 425px) {
     padding: 0 18px;
@@ -2587,8 +2875,12 @@ body {
   background: $bg-color;
   padding: 48px 7% 48px 7%;
 
+  @media screen and (min-width: 426px) and (max-width: 1090px) {
+    padding: 48px 2% 48px 2%;
+  }
+
   @media screen and (min-width: 426px) and (max-width: 1024px) {
-    padding: 48px 7% 20px 7%;
+    padding: 48px 2% 20px 2%;
   }
 
   @media screen and (max-width: 768px) {
@@ -2615,6 +2907,11 @@ body {
 
   .footer__navbar {
     width: 47%;
+
+    @media screen and (max-width: 870px) {
+      width: 57%;
+    }
+
     ul {
       display: flex;
       padding: 0;
@@ -2637,6 +2934,7 @@ body {
         &--active {
           color: $elements-color;
           text-decoration: none;
+          font-family: $futura-book-c;
         }
 
         &:hover {
@@ -2662,9 +2960,8 @@ body {
   }
 
   .footer__button {
-    border: 1px solid $elements-color;
+    border: 1px solid #fff;
     color: #fff;
-    background-color: $elements-color;
     border-radius: 2px;
     display: block;
     text-decoration: none;
@@ -2674,6 +2971,13 @@ body {
     padding: 13px 33px;
     font-family: $futura-demi-c;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+
+    @include transitions();
+
+    &:hover {
+      background-color: $elements-color;
+      border-color: $elements-color;
+    }
 
     @media screen and (min-width: 426px) and (max-width: 1024px) {
       display: none;
