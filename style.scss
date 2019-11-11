@@ -198,7 +198,7 @@ body {
   padding: 318px 0 0 60px;
 
   @media screen and (max-width: 600px) {
-    width: 93.4%;
+    width: 95.4%;
     padding: 248px 0 0 31px;
   }
 
@@ -1347,6 +1347,10 @@ body {
 
   @media screen and (max-width: 1369px) {
     margin: 0 auto 38px;
+  }
+
+  @media screen and (max-width: 516px) {
+    width: 77%;
   }
 
   .form__group {
